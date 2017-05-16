@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1754,6 +1754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515969358}
   - component: {fileID: 515969359}
+  - component: {fileID: 515969360}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -1785,7 +1786,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb63c783040a33d49a40d2ca77606bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backPack: {fileID: 1333403448}
+  backPackBehaviour: {fileID: 0}
+  Inventory: {fileID: 0}
+  InventoryUp: 0
+  itemDropdownList: {fileID: 0}
+  loadid: 0
   onCancel:
     m_PersistentCalls:
       m_Calls: []
@@ -1806,7 +1811,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UIController+OnSubmit, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  view: {fileID: 45533318}
+  savesDropdownList: {fileID: 0}
+  View: {fileID: 0}
+--- !u!114 &515969360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 515969357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778afa019e5fab648b4b65274e5b8731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table: {fileID: 11400000, guid: ec5bfe81adc504c49bbde50b86b34617, type: 2}
 --- !u!1 &520477799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6a78efd87d39c4f99d29fb443ad989, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: c4ac43023dc8993499147c74fb1b359f, type: 2}
   Capacity: 16
   children:
   - {fileID: 716237866}
@@ -3894,6 +3911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backPack_config: {fileID: 11400000, guid: 529dc606c0f1e8c408080490a6134c8b, type: 2}
+  backPack_runtime: {fileID: 0}
 --- !u!4 &1333403449
 Transform:
   m_ObjectHideFlags: 0
